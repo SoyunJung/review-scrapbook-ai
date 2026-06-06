@@ -24,8 +24,6 @@
 - Wikipedia EN 기반 작품 맥락 자동 참고
 - faster-whisper 기반 음성 파일 전사
 - Qwen3-TTS 기반 질문 음성 출력
-- Ollama / OpenAI / mock LLM provider 분리
-
 
 ## Setup
 
@@ -111,7 +109,7 @@ work
 python scripts/rebuild_embedding_index.py
 ```
 
-## Product Scope
+## Main Flow
 
 1. 작품 생성 및 기존 작품 감지
 2. 같은 작품의 기존 감상 글 업데이트
