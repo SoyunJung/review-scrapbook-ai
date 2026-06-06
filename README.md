@@ -1,8 +1,6 @@
 # review-scrapbook-ai
 
-문화콘텐츠를 감상한 직후 떠오르는 파편적인 생각을 AI 질문으로 끌어내고, 나중에 다시 읽기 좋은 구조화 감상 메모로 저장하는 개인 감상 아카이브입니다.
-
-이 저장소는 프로젝트 제출용 코드 저장소입니다. 로컬 DB, 업로드한 음성 파일, 모델 weight/cache, 결과보고서 PDF, 기획서 원본은 포함하지 않습니다.
+문화콘텐츠를 감상한 직후 떠오르는 파편적인 생각을 AI 질문으로 끌어내고, 나중에 다시 읽기 좋은 구조화 감상 메모로 저장하는 개인 감상 아카이브.
 
 ## Repository Contents
 
@@ -14,8 +12,6 @@
 - `.streamlit/config.toml`: Streamlit UI 테마와 실행 설정
 
 ## Current Milestone
-
-현재 구현 범위:
 
 - Streamlit 기반 로컬 우선 MVP
 - 작품 단위 아카이브: 작품마다 감상 글 1개 유지
@@ -30,7 +26,6 @@
 - Qwen3-TTS 기반 질문 음성 출력
 - Ollama / OpenAI / mock LLM provider 분리
 
-이미지 생성과 30초 요약은 MVP 범위에서 제외했습니다.
 
 ## Setup
 
@@ -68,10 +63,6 @@ python -m unittest discover -s tests
 
 ## Environment
 
-`.env.example`을 `.env`로 복사한 뒤 필요한 provider만 조정합니다.
-
-기본 로컬 설정:
-
 ```text
 LLM_PROVIDER=ollama
 OLLAMA_MODEL=qwen3.5:9b
@@ -88,12 +79,6 @@ WIKIPEDIA_CONTEXT_ENABLED=true
 WIKIPEDIA_LANGUAGE=en
 WIKIPEDIA_PROMPT_MAX_CHARS=7000
 ```
-
-`OLLAMA_THINK=true`로 바꾸면 Qwen thinking을 켤 수 있습니다. 다만 JSON 응답 안정성을 위해 기본값은 `false`입니다.
-
-제목 입력 후 앱은 Wikipedia EN에서 작품 정보를 자동으로 가져와 질문 생성과 감상 메모 작성의 보조 맥락으로 사용합니다. 사용자 감상이 본문이며, Wikipedia 정보는 작품 식별과 배경 이해에만 사용하도록 프롬프트에서 제한합니다. 네트워크 실패 시 기존 기록 흐름은 계속 동작합니다.
-
-`.env`에는 개인 API key가 들어갈 수 있으므로 Git에 올리지 않습니다.
 
 ## Data Model
 
