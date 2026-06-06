@@ -4,14 +4,13 @@
 
 ## 주요 기능
 
-* 작품별 감상 기록 저장
 * 텍스트 / 음성 감상 인터뷰
 * LLM 기반 파생 질문 생성
 * AI 감상 메모 초안 생성
+* 작품별 감상 기록 저장
 * 기존 작품 이어 기록
 * 키워드 검색 / 의미 검색
 * 유사한 감상 기록 추천
-* SQLite 로컬 저장
 
 ## 사용한 모델
 
@@ -45,12 +44,12 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
-로컬 AI 기능까지 실행하려면 추가 패키지를 설치합니다.
 
 ```powershell
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128
 pip install -r requirements-local-ai.txt
 ```
+
 
 ```powershell
 winget install Ollama.Ollama
@@ -69,7 +68,6 @@ Copy-Item .env.example .env
 streamlit run app.py
 ```
 
-
 ## 기본 흐름
 
 1. 작품 정보 입력
@@ -77,3 +75,5 @@ streamlit run app.py
 3. AI가 감상 메모 초안 생성
 4. 사용자가 수정 후 저장
 5. 검색 또는 연결된 감상으로 다시 확인
+
+* 로컬 DB, 음성 파일, 모델 weight/cache는 저장소에 포함하지 않음
