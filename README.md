@@ -77,12 +77,3 @@ streamlit run app.py
 3. AI가 감상 메모 초안 생성
 4. 사용자가 수정 후 저장
 5. 검색 또는 연결된 감상으로 다시 확인
-
-## 참고
-
-* 이미지 생성 기능은 최종 구현에서 제외했습니다.
-* 의미 검색 색인을 다시 만들려면 아래 명령을 사용합니다.
-
-```powershell
-python scripts/rebuild_embedding_index.py
-```
