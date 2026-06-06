@@ -220,4 +220,14 @@ __marimo__/
 # Project local artifacts
 data/*.db
 data/*.db-*
+data/uploads/
+data/assets/
+data/models/
 tmp/
+
+# Course submission artifacts kept local
+report/
+Proposal for Project.pdf
+Proposal for Project.txt
+proposal for project.md
+review_scrapbook_ai_PRD_v1.0.md
