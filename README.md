@@ -11,7 +11,7 @@
 - `.env.example`: 로컬 AI 실행 설정 예시
 - `.streamlit/config.toml`: Streamlit UI 테마와 실행 설정
 
-## Current Milestone
+## Features
 
 - Streamlit 기반 로컬 우선 MVP
 - 작품 단위 아카이브: 작품마다 감상 글 1개 유지
@@ -94,7 +94,7 @@ work
 - `record_embeddings`: 의미 검색과 연결된 감상 추천용 벡터
 - `record_assets`: 입력 음성, 질문 TTS 등 로컬 파일 자산
 
-기존 단일 기록 데이터는 앱 실행 시 자동으로 작품 단위로 묶입니다. 같은 작품으로 이어 기록하면 대표 감상 글이 업데이트됩니다.
+같은 작품으로 이어 기록하면 대표 감상 글이 업데이트됩니다.
 
 ## Local AI Features
 
@@ -105,7 +105,7 @@ work
 - TTS: `Qwen/Qwen3-TTS-12Hz-0.6B-CustomVoice`
 - Image generation: excluded
 
-의미 검색 색인은 저장/수정, 의미 검색, 연결된 감상 조회 때 자동 보정됩니다. 필요하면 sidebar의 `관리용 색인`에서 수동으로 다시 만들 수 있고, 아래 명령도 사용할 수 있습니다.
+의미 검색 색인은 저장/수정, 의미 검색, 연결된 감상 조회 때 자동 보정됩니다. 아래 명령으로 전체 색인을 다시 만들 수 있습니다.
 
 ```powershell
 python scripts/rebuild_embedding_index.py
